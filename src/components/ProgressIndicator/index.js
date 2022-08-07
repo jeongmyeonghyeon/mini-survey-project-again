@@ -1,5 +1,2 @@
-function ProgressIndicator() {
-  return <>P</>;
-}
-
-export default ProgressIndicator;
+export * from './ProgressIndicator';
+export { default } from './ProgressIndicator';

@@ -1,5 +1,2 @@
-function CompletionPage() {
-  return <>CompletionPage</>;
-}
-
-export default CompletionPage;
+export * from './CompletionPage';
+export { default } from './CompletionPage';
