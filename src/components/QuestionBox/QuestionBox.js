@@ -2,29 +2,13 @@ import ActionButtons from 'components/ActionButtons';
 import Body from 'components/Body';
 import Desc from 'components/Desc';
 import Title from 'components/Title';
-import { useParams } from 'react-router-dom';
-import { useRecoilState, useRecoilValue } from 'recoil';
-import answersState from 'stores/answers/atom';
-import questionsState from 'stores/questions/atom';
+import useCurrentAnswer from 'hooks/useCurrentAnswer';
+import useCurrentQuestion from 'hooks/useCurrentQuestion';
 import styled from 'styled-components';
 
 function QuestionBox() {
-  const params = useParams();
-  const step = parseInt(params.step);
-
-  const questions = useRecoilValue(questionsState);
-  const [answers, setAnswers] = useRecoilState(answersState);
-
-  const question = questions[step];
-
-  const answer = answers[step];
-  const setAnswer = (newAnswer) => {
-    setAnswers((answers) => {
-      const newAnswers = [...answers];
-      newAnswers[step] = newAnswer;
-      return newAnswers;
-    });
-  };
+  const question = useCurrentQuestion();
+  const [answer, setAnswer] = useCurrentAnswer();
 
   return (
     <QuestionBoxWrapper>
