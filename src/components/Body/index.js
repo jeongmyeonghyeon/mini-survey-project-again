@@ -1,6 +1,6 @@
-import SelectInput from '../SelectInput';
-import TextAreaInput from '../TextAreaInput';
-import TextInput from '../TextInput';
+import SelectInput from 'components/SelectInput';
+import TextAreaInput from 'components/TextAreaInput';
+import TextInput from 'components/TextInput';
 
 function Body({ type, answer, setAnswer, options }) {
   let InputComponent = null;

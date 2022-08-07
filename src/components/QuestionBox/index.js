@@ -1,7 +1,7 @@
-import ActionButtons from '../ActionButtons';
-import Body from '../Body';
-import Desc from '../Desc';
-import Title from '../Title';
+import ActionButtons from 'components/ActionButtons';
+import Body from 'components/Body';
+import Desc from 'components/Desc';
+import Title from 'components/Title';
 
 function QuestionBox({ question, questionsLength, step, answer, setAnswer }) {
   return (

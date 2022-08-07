@@ -1,6 +1,5 @@
+import { PRIMARY, SECONDARY, TERTIARY } from 'constants/color';
 import styled from 'styled-components';
-
-import { PRIMARY, SECONDARY, TERTIARY } from '../../constants/color';
 
 const colorMap = {
   PRIMARY,

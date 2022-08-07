@@ -1,8 +1,7 @@
+import ProgressIndicator from 'components/ProgressIndicator';
+import QuestionBox from 'components/QuestionBox';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-
-import ProgressIndicator from '../../components/ProgressIndicator';
-import QuestionBox from '../../components/QuestionBox';
 
 function SurveyPage() {
   const params = useParams();

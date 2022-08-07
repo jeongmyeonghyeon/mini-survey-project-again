@@ -1,7 +1,6 @@
+import Button from 'components/Button';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-
-import Button from '../Button';
 
 function ActionButtons({ questionsLength, step }) {
   const isLast = questionsLength - 1 === step;

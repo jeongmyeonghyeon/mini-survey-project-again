@@ -1,7 +1,6 @@
+import CompletionPage from 'pages/CompletionPage';
+import SurveyPage from 'pages/SurveyPage';
 import { Route, Routes } from 'react-router-dom';
-
-import CompletionPage from './pages/CompletionPage';
-import SurveyPage from './pages/SurveyPage';
 
 function App() {
   return (
