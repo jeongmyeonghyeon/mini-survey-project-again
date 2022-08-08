@@ -1,4 +1,5 @@
 import CompletionPage from 'pages/CompletionPage';
+import IndexPage from 'pages/IndexPage';
 import SurveyPage from 'pages/SurveyPage';
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
@@ -6,16 +7,17 @@ import styled from 'styled-components';
 function App() {
   return (
     <div className="App">
-      <AppWrapper>
-        <Box>
-          <Routes>
-            <Route path="/done/:surveyId" element={<CompletionPage />} />
-            <Route path="/survey/:surveyId" element={<SurveyPage />}>
-              <Route path=":step" element={<SurveyPage />} />
-            </Route>
-          </Routes>
-        </Box>
-      </AppWrapper>
+      {/* <AppWrapper>
+        <Box> */}
+      <Routes>
+        <Route path="/" element={<IndexPage />} />
+        <Route path="/done/:surveyId" element={<CompletionPage />} />
+        <Route path="/survey/:surveyId" element={<SurveyPage />}>
+          <Route path=":step" element={<SurveyPage />} />
+        </Route>
+      </Routes>
+      {/* </Box>
+      </AppWrapper> */}
     </div>
   );
 }
