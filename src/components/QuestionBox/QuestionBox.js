@@ -4,6 +4,7 @@ import Desc from 'components/Desc';
 import Title from 'components/Title';
 import useCurrentAnswer from 'hooks/useCurrentAnswer';
 import useCurrentQuestion from 'hooks/useCurrentQuestion';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 function QuestionBox() {

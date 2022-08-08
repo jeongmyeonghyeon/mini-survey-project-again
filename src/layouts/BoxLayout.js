@@ -6,7 +6,7 @@ function BoxLayout({ children }) {
   return (
     <AppWrapper>
       <PreviousIconWrapper to={'/'} title="Back to survey list">
-        <FcPrevious />
+        <FcPrevious color="red" />
       </PreviousIconWrapper>
       <Box>{children}</Box>
     </AppWrapper>

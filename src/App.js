@@ -2,7 +2,6 @@ import CompletionPage from 'pages/CompletionPage';
 import SurveyListPage from 'pages/SurveyListPage';
 import SurveyPage from 'pages/SurveyPage';
 import { Route, Routes } from 'react-router-dom';
-import styled from 'styled-components';
 
 function App() {
   return (
