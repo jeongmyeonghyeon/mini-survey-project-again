@@ -10,6 +10,10 @@ function QuestionBox() {
   const question = useCurrentQuestion();
   const [answer, setAnswer] = useCurrentAnswer();
 
+  if (!question) {
+    return false;
+  }
+
   return (
     <QuestionBoxWrapper>
       <Title>{question.title}</Title>

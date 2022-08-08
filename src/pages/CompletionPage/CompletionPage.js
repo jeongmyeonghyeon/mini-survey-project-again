@@ -3,6 +3,7 @@ import testWithComma from 'stores/test/testWithComma';
 
 function CompletionPage() {
   const test = useRecoilValue(testWithComma);
+
   return <>{test}</>;
 }
 
