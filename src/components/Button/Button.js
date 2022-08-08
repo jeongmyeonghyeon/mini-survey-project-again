@@ -11,6 +11,7 @@ const Button = styled.button`
   padding: 16px 24px;
   min-width: 200px;
   font-size: 18px;
+  cursor: pointer;
 
   color: ${({ type }) => colorMap[type].BUTTON.DEFAULT.COLOR};
   background: ${({ type }) => colorMap[type].BUTTON.DEFAULT.BACKGROUND};

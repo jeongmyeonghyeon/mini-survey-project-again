@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const surveys = [1, 2];
 
-function IndexPage() {
+function SurveyListPage() {
   return (
     <ul>
       {surveys.map((survey) => {
@@ -16,4 +16,4 @@ function IndexPage() {
   );
 }
 
-export default IndexPage;
+export default SurveyListPage;
