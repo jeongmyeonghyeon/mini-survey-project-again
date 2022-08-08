@@ -1,5 +1,7 @@
 import Button from 'components/Button';
 import useAnswers from 'hooks/useAnswers';
+import useCurrentAnswer from 'hooks/useCurrentAnswer';
+import useDefaultValueByType from 'hooks/useDefaultValueByType';
 import useRequiredOption from 'hooks/useRequiredOption';
 import useStep from 'hooks/useStep';
 import useSurveyId from 'hooks/useSurveyId';
@@ -14,10 +16,12 @@ function ActionButtons() {
   const step = useStep();
   const surveyId = useSurveyId();
   const questionsLength = useRecoilValue(questionsLengthState);
-  const answers = useAnswers();
+  const [answers, setAnswers] = useAnswers();
   const [isPosting, setIsPosting] = useState(false);
   const isRequired = useRequiredOption();
   const isBlockToNext = isRequired ? !answers[step]?.length : false;
+  const [, setAnswer] = useCurrentAnswer();
+  const defaultValue = useDefaultValueByType();
 
   const isLast = questionsLength - 1 === step;
   const navigate = useNavigate();
@@ -41,6 +45,7 @@ function ActionButtons() {
             setIsPosting(true);
             postAnswers(surveyId, answers)
               .then(() => {
+                setAnswers([]);
                 navigate(`/done/${surveyId}`);
               })
               .catch((err) => {
@@ -58,6 +63,9 @@ function ActionButtons() {
         <Button
           type="PRIMARY"
           onClick={() => {
+            if (!isRequired) {
+              setAnswer(defaultValue);
+            }
             navigate(`${step + 1}`);
           }}
           disabled={isBlockToNext}
