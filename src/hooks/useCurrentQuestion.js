@@ -5,7 +5,6 @@ import useStep from './useStep';
 
 function useCurrentQuestion() {
   const step = useStep();
-
   const surveyData = useRecoilValue(surveyState);
   const questions = surveyData?.questions || [];
 
